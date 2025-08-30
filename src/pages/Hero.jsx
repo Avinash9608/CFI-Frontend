@@ -31,7 +31,7 @@ const Hero = () => {
   useEffect(() => {
     const fetchHeroData = async () => {
       try {
-        const response = await fetch(`${process.env.BASE_URL}/api/hero`);
+        const response = await fetch(`${import.meta.env.BASE_URL}/api/hero`);
         const data = await response.json();
         setHeroData((prev) => ({
           ...prev,

@@ -12,7 +12,7 @@ const Gallery = () => {
     const fetchImages = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`${process.env.BASE_URL}/api/gallery`);
+        const response = await fetch(`${import.meta.env.BASE_URL}/api/gallery`);
         const data = await response.json();
         setImages(data.images || []);
       } catch (error) {
