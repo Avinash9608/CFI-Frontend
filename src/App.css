@@ -1,0 +1,209 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Add this to your main CSS file or use a <style> tag */
+.helvetica {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 800px) {
+  #gallery {
+    display: flex !important;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto !important;
+  }
+  #gallery > div {
+    width: 48%;
+    margin: 1%;
+  }
+  @media (max-width: 350px) {
+    #gallery > div {
+      width: 98%;
+    }
+  }
+}
+
+/* GalleryPhoto2.jsx */
+/* Add this to your main CSS file */
+.gallery {
+  position: relative;
+}
+
+@media (max-width: 800px) {
+  .gallery-track {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .gallery-track {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+/* GalleryPhoto.jsx */
+/* Gallery.css */
+/* Add this to your main CSS file */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.img-c {
+  width: 200px;
+  height: 200px;
+}
+
+@media (max-width: 650px) {
+  .gallery {
+    width: 100% !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .img-c {
+    width: 50%;
+    height: 150px;
+  }
+}
+
+@media (max-width: 400px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .img-c {
+    width: 100%;
+    height: 200px;
+  }
+}
+.img-w img {
+  display: none;
+}
+
+.img-c:hover .img-w {
+  transform: scale(1.08);
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
+}
+
+.img-c.active {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  z-index: 2;
+}
+
+.img-c.postactive {
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.img-c.active.positioned {
+  left: 0 !important;
+  top: 0 !important;
+  transition-delay: 50ms;
+}
+
+/* Gallery1 */
+/* Add this to your main CSS file */
+
+.gallery-wrap {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.item:hover::before {
+  opacity: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 0;
+    width: 100% !important;
+  }
+
+  .gallery-wrap {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .item {
+    height: 200px;
+    flex: 1;
+  }
+
+  .item:hover {
+    flex: 3;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 32px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .item {
+    height: 150px;
+  }
+}
