@@ -38,7 +38,7 @@ const Gallery1 = () => {
         </h1>
 
         <div className="gallery-wrap flex w-full h-[70vh] rounded-lg overflow-hidden shadow-xl">
-          {images.slice(21, 29).map((image) => (
+          {images.slice(0, 7).map((image) => (
             <div
               key={image._id}
               className="item flex-1 h-full bg-center bg-cover bg-no-repeat transition-all duration-800 ease-in-out cursor-pointer hover:flex-[7]"

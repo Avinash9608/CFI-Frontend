@@ -80,7 +80,7 @@ const Gallery = () => {
         ref={galleryRef}
         className="gallery w-[600px] mx-auto rounded overflow-hidden relative"
       >
-        {images.slice(10, 19).map((image, index) => (
+        {images.slice(0, 9).map((image, index) => (
           <div
             key={image._id || index}
             className={`img-c float-left relative overflow-hidden transition-all duration-400 ease-in-out
